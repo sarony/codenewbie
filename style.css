@@ -7,7 +7,12 @@ body{
   margin: 80px 150px 150px 150px;
 }
 
-p, h1, h2, h3, li, h4 {
+h3 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #404040;
+}
+
+p, h1, h2, li, h4 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #404040;
   font-size: 1.5em;
@@ -29,8 +34,14 @@ h2 {
 
 .title {
   font-weight: 800;
-/*  font-size: 1.7em;
-*/}
+  font-size: 1.7em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.title:after {
+  margin-right: 10px;
+}
 
 .deck {
   width: 100%;
@@ -45,19 +56,49 @@ h2 {
 }
 
 section {
-  padding-left: 70px;
-  padding-top: 30px;
   width: 90%;
+  border-bottom: solid 1px #ccc;
+  padding: 30px;
 }
 
-section h3:first-child{
-  width: 70%;
+section.faq h3.title {
+  text-decoration: none;
+}
+
+section.faq h3 {
+  text-decoration: underline;
 }
 
 h3, li {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-/*  font-size: 1.3em;
-*/  font-weight: 400;
+  font-size: 1.7em;
+  font-weight: 400;
+}
+
+.rules li, .rules {
+  display: inline;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.rules {
+  padding: 40px 0px;
+  text-align: center;
+  vertical-align: middle
+}
+
+.rules li:before {
+  content: counter(my-awesome-counter);
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 25px 0 40px;
+  width: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  border-radius: 1in;
+  border: 1.5px solid #11bd2d;
+  font-weight: 900;
 }
 
 ul {
